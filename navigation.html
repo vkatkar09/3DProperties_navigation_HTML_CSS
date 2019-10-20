@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Navigation
+        </title>
+        <style>
+         *{
+             margin:0px;
+             padding:0px;
+         }
+          body{
+             background-color:black;
+             margin-left:40px;
+         }
+         ul, ul.sub1,ul.sub2 {
+             list-style-type:none;
+         }
+         ul li{
+             width:150px;
+             height: 50px;
+             float: left;
+             background-color:teal;
+             margin-right:5px;
+             position: relative;
+         }
+         ul li a {
+             display: block;
+             width: 150px;
+             height: 50px;
+             text-decoration: none;
+             color:white;
+             font-size:20px;
+             text-align: center;
+             line-height: 50px;
+             transition:all 0.5s ease-in-out 0s;
+         }
+         ul li a:hover {
+             background-color:rgb(8, 127, 196);
+         }
+
+ ul li ul.sub1 li {
+    border:1px solid rgb(255, 41, 77);
+    margin-top:5px;
+ }
+  ul li ul.sub1 {
+      display: none;
+      position: absolute;
+      top:50px;
+      left:0px;
+      /* border:2px solid red;*/  /*never give any margin here */
+  }
+
+  ul li ul.sub2 {
+      display: none;
+      position: absolute;
+      top:-6px;
+      left:150px;
+      /* bor5der:2px solid red; */
+
+  }
+  ul li:hover ul.sub1 {
+      display: block;
+  }
+ul li ul.sub1 li:hover ul.sub2 {
+    display: block;
+}
+        </style>
+    </head>
+    <body>
+        <ul>
+          <li>
+              <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+            <ul class="sub1">
+              <li>
+                  <a href="#">About1</a>
+              </li>
+              <li>
+                  <a href="#">About2</a>
+              </li>
+              <li>
+                  <a href="#">About3</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+            <ul class="sub1">
+        <li>
+            <a href="#">Contact1</a>
+        </li>
+        <li>
+            <a href="#">Contact2</a>
+        </li>
+        <li>
+            <a href="#">Contact3</a>
+        </li>
+        <li>
+            <a href="#">Contact4</a>
+            <ul class="sub2">
+                <li>
+                    <a href="#">Contact 4.1</a>
+                </li>
+                <li>
+                    <a href="#">Contact 4.2</a>
+                </li>
+                <li>
+                    <a href="#">Contact 4.3</a>
+                </li>
+            </ul>
+        </li>
+            </ul>
+        </li>
+        </ul>
+    </body>
+</html>
